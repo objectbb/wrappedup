@@ -1,0 +1,60 @@
+ .full button span {
+     background-color: limegreen;
+     border-radius: 32px;
+     color: black;
+ }
+ 
+ .partially button span {
+     background-color: orange;
+     border-radius: 32px;
+     color: black;
+ }
+ 
+ .white_font {
+     color: #fff;
+ }
+ 
+ .spacingsidebar {
+     margin-top: 60px;
+     margin-bottom: 60px;
+ }
+ 
+ .spacinggeneral {
+     margin-top: 15px;
+     margin-bottom: 15px;
+     padding: 3px;
+ }
+ 
+ .bordernavbar {
+     border: 1px solid #e2e2e2;
+ }
+ 
+ .servicearaimage {
+     width: 60%;
+ }
+ 
+ .background_turner_red {
+     background: linear-gradient( rgba(255, 0, 0, 0.7), rgba(255, 0, 0, 0.9)), url(../images/turner.jpg);
+ }
+ 
+ .fulltilebg {
+     background-size: cover;
+     background-attachment: fixed;
+ }
+ 
+ .byline {
+     line-height: 2;
+ }
+ 
+ .fullcoveragebg {
+     background-size: 100%;
+     background-repeat: no-repeat;
+ }
+
+.opacitystandard {
+  opacity: .90;
+}
+
+.opacitybyline {
+  opacity: .65;
+}
