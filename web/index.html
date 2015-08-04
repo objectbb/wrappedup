@@ -1,6 +1,7 @@
 <!doctype html>
 <html ng-app="wrappedup.app">
     <head>
+       <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="dist/main.min.css">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
         <title>
@@ -19,14 +20,20 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
             <div class="row">
-                <div class="col-xs-3 col-md-3 col-lg-3">
-                    <img src="./images/logo.png" />
-                </div>
-                <div class="col-xs-8 col-md-8 col-lg-9">
-                    <h1>Wrapped Up</h1>
-            </div>
+                 <div class="col-xs-12 col-md-12 col-lg-12">
+                  <center>  <img src="./images/logo.png" /> </center>
+                 </div>
+               
+                  <div class="row">
+                     <div class="col-xs-12 col-md-12 col-lg-12">
+                        <center>   
+                          <span class="title standardfont">Wrapped Up</span>
+                        </center>
+                  </div>
+
+              </div>
             <div class="row">
-                  <div class="col-xs-11 col-md-11 col-lg-11"> 
+                  <div class="col-xs-12 col-md-12 col-lg-12"> 
                     <center>             
                     <h3 class="byline opacitybyline ">...an <i>Organization</i> that allows people to "Give the Gift of Time" by the act of organizing meal giving, running errands, child/pet care, appointments (doctor/dentist etc.) around <strong><i>significant life</i> events such as chemotherapy/radiation treatments, other illnesses, accidents, births and deaths...</strong>
                     </h3>
@@ -35,7 +42,7 @@
             </div>
              <div class="row">     
                <div class="col-xs-2 col-md-3 col-lg-3"></div>
-               <div class="col-xs-8 col-md-8 col-lg-8"> 
+               <div class="col-xs-10 col-md-9 col-lg-9"> 
                     <div id="navbar" >                  
                           <h4>
                             <ul class="nav navbar-nav bordernavbar">
@@ -50,22 +57,21 @@
             </div>
 
               <div class="row" ng-controller="DatepickerDemoCtrl">
-                  <div class="col-xs-12 col-md-12 col-lg-12">
+          
 
-                      <h3 class="spacingsidebar">Select Date of Service(s) in Baldwin County, Alabama</h2>
-                
-                   <div class="col-xs-6 col-md-6 col-lg-6">
-                      <div style="display:inline-block;">
-                          <datepicker ng-model="dt" ng-change="open()" min-date="minDate" show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)"></datepicker>
-                      </div>
-                     </div>
-                   <div class="col-xs-6 col-md-6 col-lg-6">
-                      <a href="https://www.google.com/maps/place/Baldwin+County,+AL/@30.7716471,-87.707389,9z/data=!3m1!4b1!4m2!3m1!1s0x889a6710bf111131:0x3cc41d4f3bfdafd0"><img class="mapimageborder servicearaimage img-responsive" src="./images/servicearea.png" /></a>
-                      </div>
-                  </div><!--/.col-xs-6.col-lg-4-->   
-                  </h3>
-              </div><!--/row-->
-           </div><!--/.col-xs-12.col-sm-9-->
+                      <center>
+                          <h3 class="spacingsidebar">Select Date of Service(s) in Baldwin County, Alabama</h3>
+                    
+                                <span>
+                                    <datepicker ng-model="dt" ng-change="open()" min-date="minDate" show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)"></datepicker>
+
+                                <a tooltip="clcik me to see map" target="_blank" href="https://www.google.com/maps/place/Baldwin+County,+AL/@30.7716471,-87.707389,9z/data=!3m1!4b1!4m2!3m1!1s0x889a6710bf111131:0x3cc41d4f3bfdafd0"><img class="mapimageborder servicearaimage" src="./images/servicearea.png" /></a>
+                                </span>
+
+                      </center>
+ 
+                  </div><!--/row-->
+               </div><!--/.col-xs-12.col-sm-9-->
 
                   <div class="col-xs-6 col-sm-3 sidebar-offcanvas background_turner_red spacinggeneral opacitystandard" id="sidebar">
                       
