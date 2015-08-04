@@ -7457,3 +7457,12 @@ button.close {
 .opacitybyline {
   opacity: .65;
 }
+
+.fontstrong{
+     font-weight: bold !important;
+}
+
+.mapimageborder{
+     padding: 1px;
+     border: 1px solid black;  
+}
