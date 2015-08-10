@@ -219,11 +219,14 @@
                                             <div class="well well-lg" ng-if="yesrequest">
                                             <br>
                                             <ul class="list-group textalignleft">
+                                                <li class="list-group-item active">The following will be sent to <strong>Wrapped Up</strong> for processing:</li>
                                                 <li class="list-group-item" ng-repeat="(key, value) in request">{{key}} : {{value}}</li>
                                             </ul>
                                          
                                             <br>
                                             <button type="submit" class="btn btn-info btn-block animated requestnow shake" ng-click="send()">Request Now</button>
+                                             <alert type="success" class="textalignleft" ng-show="issent == 1">Sent! expect response in less than 24 hours</alert>
+                                             <alert type="error" ng-show="issent == 0">Error! request was not sent</alert>
                                             <br>
                                             </div>
                                             <button type="submit" class="btn btn-warning btn-lg btn-block" ng-click="clear()">Clear</button>

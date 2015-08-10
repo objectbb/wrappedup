@@ -6,9 +6,9 @@
                 var urlrequest = "http://peaceful-lowlands-1646.herokuapp.com/web";
 
                 return $http.post(urlrequest,{Body:  JSON.stringify(data)}).success(function(data){
-                    return data;
+                    return 1;
                 }).error(function(err){
-                    alert(JSON.stringify(err));
+                    return 0;
                 });
             }
         }
