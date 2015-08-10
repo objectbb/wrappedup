@@ -10786,3 +10786,7 @@ button.close {
 .background_car1_clear {
      background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)), url(../images/car1.jpg);
  }
+
+.imagewidth{
+  width:50px;
+}

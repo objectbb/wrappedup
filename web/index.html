@@ -136,31 +136,32 @@
                                                                       
                                                                             <div class="btn-group">
                                                                                     <span class="fontstrong input-group-addon">
-                                                                                        <input type="checkbox" ng-model="request.meal" aria-label="Meal"> Meal
+                                                                                        <input type="checkbox" ng-model="request.meal" aria-label="Meal"> Meal <img class="imagewidth img-responsive" src="./images/mealplate.png">
                                                                                     </span>
                                                                                     <span class="fontstrong input-group-addon">
-                                                                                        <input type="checkbox" ng-model="request.housework" aria-label="Housework"> Housework
+                                                                                        <input type="checkbox" ng-model="request.housework" aria-label="Housework"> Housework <img class="imagewidth img-responsive" src="./images/housework.png">
                                                                                     </span>
                                                                                     <span class="fontstrong input-group-addon">
-                                                                                        <input type="checkbox" ng-model="request.childcare" aria-label="Childcare"> Child care
+                                                                                        <input type="checkbox" ng-model="request.childcare" aria-label="Childcare"> Child care <img class="imagewidth img-responsive" src="./images/childcare.png">
                                                                                     </span>
                                                                                 </div>
 
                                                                                 <div class="btn-group">
                                                                                     <span class="fontstrong input-group-addon">
-                                                                                    <input type="checkbox" ng-model="request.pet" aria-label="Pet care"> Pet care
+                                                                                    <input type="checkbox" ng-model="request.pet" aria-label="Pet care"> Pet care <img class="imagewidth img-responsive" src="./images/pets.png">
                                                                                     </span>
                                                                                     <span class="fontstrong input-group-addon">
-                                                                                    <input type="checkbox" ng-model="request.lawn" aria-label="Lawn care"> Lawn care
+                                                                                    <input type="checkbox" ng-model="request.lawn" aria-label="Lawn care"> Lawn care <img class="imagewidth img-responsive" src="./images/lawncare.png">
                                                                                     </span>
                                                                                     <span class="fontstrong input-group-addon">
-                                                                                    <input type="checkbox" ng-model="request.visitors" aria-label="Visitors"> Visitors
+                                                                                    <input type="checkbox" ng-model="request.visitors" aria-label="Visitors"> Visitors <img class="imagewidth img-responsive" src="./images/visitor.png">
                                                                                     </span>
                                                                                 </div>
 
                                                                                 <div class="btn-group">
                                                                                     <span class="fontstrong input-group-addon">
                                                                                     <input type="checkbox" ng-model="request.transportation" aria-label="Transportation"> Transportation
+                                                                                    <img class="imagewidth img-responsive" src="./images/transport.png">
                                                                                     </span>
                                                                                 </div>
                                                                         </div>
@@ -207,7 +208,7 @@
                                                                             <div>
                                                                                     <div class="col-sm-12">
                                                                                         <br>
-                                                                                        <strong>Please provid detailed instructions and time you will like the service...Thank you!</strong>
+                                                                                        <strong>Please provide detailed instructions and time you will like the service...Thank you!</strong>
                                                                                         <textarea  rows="5" class="form-control" name="details" ng-model="info.details" placeholder="I need your help in moving a couch around 4:00pm." ng-minlength="5" ng-maxlength="300" required></textarea>
                                                                                            <p ng-show="requestform.details.$error.minlength">Details is too short.</p>
                                                                                           <p ng-show="requestform.details.$error.maxlength">Details is too long.</p>
