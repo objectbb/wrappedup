@@ -119,3 +119,7 @@
 .imagewidth{
   width:50px;
 }
+
+.wordwrap{
+  word-wrap: break-word;
+}

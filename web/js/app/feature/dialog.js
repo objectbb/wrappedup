@@ -14,7 +14,9 @@
                 $scope.request = null;
             };
             $scope.send = function() {
-                RequestService.send(angular.extend($scope.request,$scope.info)).success(function(data, status) {
+
+                var combined = angular.extend($scope.request,{ date: $scope.items.toString("MM/DD/YYYY")});
+                RequestService.send(angular.extend(combined,$scope.info)).success(function(data, status) {
                     if (!data.error) $scope.issent = 1;
                     else $scope.issent = 0;
                 });
