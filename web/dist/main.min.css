@@ -10768,8 +10768,21 @@ button.close {
   opacity: .45;
  }
 
- #requestnow{
-  -vendor-animation-duration: 3s;
+ .requestnow{
+  -vendor-animation-duration: 15s;
   -vendor-animation-delay: 2s;
   -vendor-animation-iteration-count: infinite;
 }
+
+.lineheight{
+  line-height: 150%;
+}
+
+.background_turnerwithotherppl_clear {
+     background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)), url(../images/turnerwithotherppl.jpg);
+ }
+
+
+.background_car1_clear {
+     background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)), url(../images/car1.jpg);
+ }

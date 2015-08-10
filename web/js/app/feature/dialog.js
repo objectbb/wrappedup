@@ -14,7 +14,7 @@
                 $scope.request = null;
             };
             $scope.send = function() {
-                RequestService.send($scope.request).success(function(data, status) {
+                RequestService.send(angular.extend($scope.request,$scope.info)).success(function(data, status) {
                     if (!data.error) $scope.issent = 1;
                     else $scope.issent = 0;
                 });
