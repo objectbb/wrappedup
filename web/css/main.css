@@ -80,6 +80,10 @@
      border: 1px solid black;  
 }
 
+.textalignleft{
+  text-align:left;
+}
+
 .icondollarbg:before {
   font-family: "Glyphicons Halflings";
   content: "\e148"; }
@@ -92,3 +96,9 @@
   font-size: 40px;
   opacity: .45;
  }
+
+ #requestnow{
+  -vendor-animation-duration: 3s;
+  -vendor-animation-delay: 2s;
+  -vendor-animation-iteration-count: infinite;
+}

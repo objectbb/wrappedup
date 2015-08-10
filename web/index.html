@@ -1,236 +1,242 @@
 <!doctype html>
 <html ng-app="wrappedup.app">
     <head>
-
-       <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="dist/main.min.css">
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-        <title>
-        Wrapped Up is a non-profit community service organization that provides a way for friends and neighbors to help their community members in need.
-        </title>
-    </head>
-    <body>
-
-        <div class="container">
-
-
-      <div class="row row-offcanvas row-offcanvas-right">
-
-        <div class="col-xs-12 col-sm-9">
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-          </p>
-            <div class="row">
-                 <div class="col-xs-12 col-md-12 col-lg-12">
-                  <center>  <img src="./images/logo.png" /> </center>
-                 </div>
-               
-                  <div class="row">
-                     <div class="col-xs-12 col-md-12 col-lg-12">
-                        <center>   
-                          <span class="title standardfont">Wrapped Up</span>
-                        </center>
-                  </div>
-
-              </div>
-            <div class="row">
-                  <div class="col-xs-12 col-md-12 col-lg-12"> 
-                    <center>             
-                    <h3 class="byline opacitybyline ">...an <i>Organization</i> that allows people to "Give the Gift of Time" by the act of organizing meal giving, running errands, child/pet care, appointments (doctor/dentist etc.) around <strong><i>significant life</i> events such as chemotherapy/radiation treatments, other illnesses, accidents, births and deaths...</strong>
-                    </h3>
-                    </center>
-                  </div>
-            </div>
-             <div class="row">     
-               <div class="col-xs-2 col-md-3 col-lg-3"></div>
-               <div class="col-xs-10 col-md-9 col-lg-9"> 
-                    <div id="navbar" >                  
-                          <h4>
-                            <ul class="nav navbar-nav bordernavbar">
-                                <li><a href="#volunteer">Volunteer</a></li>
-                                <li><a href="#founder">Meet the Founder</a></li>
-                                <li><a href="#goals">Goals</a></li>
-                            </ul>
-                          </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-              <div class="row" ng-controller="DatepickerDemoCtrl">
-          
-
-                      <center>
-                          <h3 class="spacingsidebar">Select Date of Service(s) in Baldwin County, Alabama</h3>
-                    
-                                <span>
-                                    <datepicker ng-model="dt" ng-change="open()" min-date="minDate" show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)"></datepicker>
-
-                                <a tooltip="clcik me to see map" target="_blank" href="https://www.google.com/maps/place/Baldwin+County,+AL/@30.7716471,-87.707389,9z/data=!3m1!4b1!4m2!3m1!1s0x889a6710bf111131:0x3cc41d4f3bfdafd0"><img class="mapimageborder servicearaimage" src="./images/servicearea.png" /></a>
-                                </span>
-
-                      </center>
- 
-                  </div><!--/row-->
-               </div><!--/.col-xs-12.col-sm-9-->
-
-                  <div class="col-xs-6 col-sm-3 sidebar-offcanvas background_turner_red spacinggeneral opacitystandard" id="sidebar">
-                      
-                <div class="addthis_sharing_toolbox"></div>
-
-                       <p class="spacingsidebar">
-                      <button type="button" class="btn btn-primary btn-lg btn-block">Donate<span class="icondollarbg statsicon"></span></button>
-                      </p>
-                      
-                         <p class="spacingsidebar">
-                      <h2 class="white_font">Contact info:</h2>
-                      <h3>
-                      <p class="white_font">
-                         Ph# 222-222-2222     
-                      </p>
-
-                      <p class="white_font">123 test ave</p>
-                      <p class="white_font">Chicago, IL 60622</p>
-                      </h3>
-                      </p>
-                      <h5 class="spacingsidebar white_font byline">
-                      Wrapped Up
-                        is a non-profit community service organization that provides a way for friends and neighbors to help their community members in need.
-                      </h5>
-                  </div><!--/.sidebar-offcanvas-->
-                </div><!--/row-->
-
-                <hr>
-
-                <footer>
-                  <p>&copy; Wrapped Up 2015 - 501(c) (3) Charity Organization. Public charity status 170 (b) (1) (A) (vi)</p>
-                </footer>
-
-              </div><!--/.container-->
-
-              <div>
-                  <script type="text/ng-template" id="signup.html">
-                      <div class="modal-header">
-                          <h3 class="modal-title">Date Selected: {{items | date:"MM/dd/yyyy" }}</h3>
-                      </div>
-
-                          <div class="row">
-                 
-                            <div class=" col-sm-12 col-md-12 col-lg-12">
-  
-                            <form name="requestform" >
-
-                              <div class="btn-group"> 
-
-                                  <span class="fontstrong input-group-addon">
-                                    <input type="checkbox" ng-model="request.meal" aria-label="Meal"> Meal
-                                  </span>  
-
-                                 <span class="fontstrong input-group-addon">
-                                    <input type="checkbox" ng-model="request.housework" aria-label="Housework"> Housework
-                                  </span>
-
-                                <span class="fontstrong input-group-addon">
-                                    <input type="checkbox" ng-model="request.childcare" aria-label="Childcare"> Child care
-                                  </span>
-                                </div>
-  
-                                <div class="btn-group"> 
-                                <span class="fontstrong input-group-addon">
-                                  <input type="checkbox" ng-model="request.pet" aria-label="Pet care"> Pet care
-                                </span>  
-
-                                <span class="fontstrong input-group-addon">
-                                  <input type="checkbox" ng-model="request.lawn" aria-label="Lawn care"> Lawn care
-                                </span>
-
-
-                                <span class="fontstrong input-group-addon">
-                                  <input type="checkbox" ng-model="request.visitors" aria-label="Visitors"> Visitors
-                                </span>
-                                </div>
-  
-
-                                <div class="btn-group"> 
-                                <span class="fontstrong input-group-addon">
-                                  <input type="checkbox" ng-model="request.transportation" aria-label="Transportation"> Transportation
-                                </span> 
-                                </div>
-
-
-                             </div>
-                             </div>
-                              <br>
-                             <div class="row">
-                 
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-     
-                              <div class="form-group">
-                                <label for="phone" class="col-sm-2 control-label">Full Name</label>
-                                <div class="col-sm-10">
-                                  <input type="string" class="form-control" ng-model="request.fullname" placeholder="Sally Mae"  ng-minlength="5" ng-maxlength="75"  ng-required>
-                                </div>
-                              </div>
-                              <div class="form-group">
-                                <label for="phone" class="col-sm-2 control-label">Phone</label>
-                                <div class="col-sm-10">
-                                  <input type="phone" class="form-control" ng-model="request.phone" placeholder="222-222-2222"  ng-minlength="12" ng-maxlength="12"  ng-required>
-                                </div>
-                              </div>
-                               <div class="form-group">
-                                <label for="address" class="col-sm-2 control-label">Address</label>
-                                <div class="col-sm-10">
-                                  <input type="address"  class="form-control" ng-model="request.address" placeholder="123 wrappedup drive, Robertsdate, AL" ng-minlength="5" ng-maxlength="200" ng-required>
-                                </div>
-                              </div>
-                              <div class="form-group">
-                                <label for="email" class="col-sm-2 control-label">Email</label>
-                                <div class="col-sm-10">
-                                  <input type="email" class="form-control" ng-model="request.email" placeholder="sara@help.org" ng-minlength="5" ng-maxlength="150">
-                                </div>
-                              </div>
-                              <div>
-                                <div class="col-sm-12">
-                                  <br>
-                                  <textarea  rows="5" class="form-control" ng-model="request.details" placeholder="Allergic to peanuts.  Need dishes washed and trash taken out." ng-minlength="5" ng-maxlength="300" ng-required></textarea>
-                                </div>
-                              </div>
-                              
-                            </form>
-
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" type="text/css" href="dist/main.min.css">
+            <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+            <title>
+            Wrapped Up is a non-profit community service organization that provides a way for friends and neighbors to help their community members in need.
+            </title>
+        </head>
+        <body>
+            <div class="container">
+                <div class="row row-offcanvas row-offcanvas-right">
+                    <div class="col-xs-12 col-sm-9">
+                        <p class="pull-right visible-xs">
+                        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+                        </p>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 col-lg-12">
+                                <center>  <img src="./images/logo.png" /> </center>
                             </div>
-                      </div><!-- /input-group -->
 
-                      
-                      <div class="modal-footer">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-12 col-lg-12">
+                                    <center>
+                                    <span class="title standardfont">Wrapped Up</span>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-12 col-lg-12">
+                                    <center>
+                                    <h3 class="byline opacitybyline ">...an <i>Organization</i> that allows people to "Give the Gift of Time" by the act of organizing meal giving, running errands, child/pet care, appointments (doctor/dentist etc.) around <strong><i>significant life</i> events such as chemotherapy/radiation treatments, other illnesses, accidents, births and deaths...</strong>
+                                    </h3>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-2 col-md-3 col-lg-3"></div>
+                                <div class="col-xs-10 col-md-9 col-lg-9">
+                                    <!--
+                                                                        <div id="navbar" >
+                                                                <h4>
+                                                                    <ul class="nav navbar-nav bordernavbar">
+                                                                            <li><a href="#volunteer">Volunteer</a></li>
+                                                                            <li><a href="#founder">Meet the Founder</a></li>
+                                                                            <li><a href="#goals">Goals</a></li>
+                                                                    </ul>
+                                                                </h4>
+                                                            </div>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" ng-controller="DatepickerDemoCtrl">
 
-                            
-                          <button type="submit" class="btn btn-primary btn-lg btn-block" ng-disabled="! requestform.$valid" ng-click="yesrequest=1">Schedule</button>
+                            <center>
+                            <h3 class="spacingsidebar">Select Date of Service(s) in Baldwin County, Alabama</h3>
 
-                          <p class="bg-info" ng-if="yesrequest">
-                              <br>
-                                {{request | json}}
+                            <span>
+                            <datepicker ng-model="dt" ng-change="open()" min-date="minDate" show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)"></datepicker>
+                            <a tooltip="clcik me to see map" target="_blank" href="https://www.google.com/maps/place/Baldwin+County,+AL/@30.7716471,-87.707389,9z/data=!3m1!4b1!4m2!3m1!1s0x889a6710bf111131:0x3cc41d4f3bfdafd0"><img class="mapimageborder servicearaimage" src="./images/servicearea.png" /></a>
+                            </span>
+                            </center>
+
+                            </div><!--/row-->
+                            </div><!--/.col-xs-12.col-sm-9-->
+                            <div class="col-xs-6 col-sm-3 sidebar-offcanvas background_turner_red spacinggeneral opacitystandard" id="sidebar">
+
+                                <div class="addthis_sharing_toolbox"></div>
+                                <p class="spacingsidebar">
+                                <button type="button" class="btn btn-primary btn-lg btn-block">Donate<span class="icondollarbg statsicon"></span></button>
+                                </p>
+                                <p class="spacingsidebar">
+                                <h2 class="white_font">Contact info:</h2>
+                                <h3>
+                                <p class="white_font">
+                                Margaret Turner
+                                </p>
+                                <p><h4 class="white_font opacitystandard"> mrsmargaretturner@gmail.com</h4></p>
+                                <p><h4 class="white_font">Executive Director</h4></p>
                                 <br>
-                               <button type="submit" class="btn btn-info btn-block" ng-click="send()">Request Now</button>
-                               <br>
-                          </p>
+                                <h3>
+                                <p class="white_font">
+                                Ph# 251-504-6160
+                                </p>
+                                <p class="white_font opacitystandard">Po box 6</p>
+                                <p class="white_font">Lillian, AL 36549</p>
+                                </h3>
+                                </p>
+                                <!--
+                                                    <h5 class="spacingsidebar white_font byline">
+                                                    <strong>Wrapped Up</strong>
+                                                        is a non-profit community service organization that provides a way for friends and neighbors to help their community members in need.
+                                                    </h5>
+                                -->
+                                <br><br>
+                                <p class="white_font"> <strong>My name is Margaret (Humenansky) Turner I am a Breast Cancer Survivor!</strong></p>
+                                <p class="white_font">
+                                Wrapped Up began after my own battle against Breast Cancer.
+                                When I shared my diagnosis with family and friends, they all had the same response: "I'm so sorry, what can I do to help?"
+                                After a long pause I would respond: "Nothing, really, everything's fine."
+                                Everything was NOT fine. Like most people I have dozens of things to do each day. Now added the over whelming news of being told I have Cancer, needing to begin treatment while juggling a family with a special needs child (my oldest son is severely Autistic) and a job. I felt as though I was hanging from a cliff by my finger nails. Fortunately for me I am blessed with a supportive family,friends, church members and neighbors that ALL stepped up to help. Thank you. Cancer is also a humbling experience.
+                                </p>
+                                <p class="white_font">
+                                Suffering from an illness or injury is draining both physically and emotionally.  You're fatigued and can barely move. Just going to the market for something as simple as bread or milk can wear you out. Even the strongest of people become fatigued when receiving chemotherapy or radiation.
+                                </p>
+                                <p class="white_font">
+                                There are so many things you can do to help your friends in need. Give the gift of time, by helping with meals, laundry, child care, pet care, grocery shopping, running errands, or lift to and from their doctor appointments.  This site was created to help organize all of those things and more with our interactive time management tool /calendar. Knowing what they need and the time they need it will help their friends be more organized when giving the gift of time.
+                                </p>
+                                </div><!--/.sidebar-offcanvas-->
+                                </div><!--/row-->
+                                <hr>
+                                <footer>
+                                    <p>&copy; Wrapped Up 2015 - 501(c) (3) Charity Organization. Public charity status 170 (b) (1) (A) (vi)</p>
+                                </footer>
+                                </div><!--/.container-->
+                                <div>
+                                    <script type="text/ng-template" id="signup.html">
+
+                                        <form name="requestform" novalidate>
+                                                        <div class="modal-header">
+                                                                <h3 class="modal-title">Date Selected: {{items | date:"MM/dd/yyyy" }}</h3>
+                                                        </div>
+                                                            <div class="row">
+                                                          <form name="requestform" novalidate>
+                                                                    <div class=" col-sm-12 col-md-12 col-lg-12">
+
+                                                                      
+                                                                            <div class="btn-group">
+                                                                                    <span class="fontstrong input-group-addon">
+                                                                                        <input type="checkbox" ng-model="request.meal" aria-label="Meal"> Meal
+                                                                                    </span>
+                                                                                    <span class="fontstrong input-group-addon">
+                                                                                        <input type="checkbox" ng-model="request.housework" aria-label="Housework"> Housework
+                                                                                    </span>
+                                                                                    <span class="fontstrong input-group-addon">
+                                                                                        <input type="checkbox" ng-model="request.childcare" aria-label="Childcare"> Child care
+                                                                                    </span>
+                                                                                </div>
+
+                                                                                <div class="btn-group">
+                                                                                    <span class="fontstrong input-group-addon">
+                                                                                    <input type="checkbox" ng-model="request.pet" aria-label="Pet care"> Pet care
+                                                                                    </span>
+                                                                                    <span class="fontstrong input-group-addon">
+                                                                                    <input type="checkbox" ng-model="request.lawn" aria-label="Lawn care"> Lawn care
+                                                                                    </span>
+                                                                                    <span class="fontstrong input-group-addon">
+                                                                                    <input type="checkbox" ng-model="request.visitors" aria-label="Visitors"> Visitors
+                                                                                    </span>
+                                                                                </div>
+
+                                                                                <div class="btn-group">
+                                                                                    <span class="fontstrong input-group-addon">
+                                                                                    <input type="checkbox" ng-model="request.transportation" aria-label="Transportation"> Transportation
+                                                                                    </span>
+                                                                                </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <br>
+                                                                    <div class="row">
+                                                            
+                                                                        <div class="col-sm-12 col-md-12 col-lg-12">
+                                                    
+                                                                            <div class="form-group" ng-class="{ 'has-error' : request.fullname.$invalid && !request.fullname.$pristine }">
+                                                                                    <label for="phone" class="col-sm-2 control-label">Full Name</label>
+                                                                                    <div class="col-sm-10">
+                                                                                        <input type="text" class="form-control" name="fullname" ng-model="request.fullname" placeholder="Sally Mae"  ng-minlength="5" ng-maxlength="75" required>
+                                                                                         <p ng-show="requestform.fullname.$error.minlength">Full Name is too short.</p>
+                                                                                          <p ng-show="requestform.fullname.$error.maxlength">Full Name is too long.</p>
+                                                                                           <p ng-show="requestform.fullname.$invalid && !requestform.fullname.$pristine" class="help-block">Your Full name is required.</p>
+                                                                                    </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                    <label for="phone" class="col-sm-2 control-label">Phone</label>
+                                                                                    <div class="col-sm-10">
+                                                                                        <input type="phone" class="form-control" name="phone" ng-model="request.phone" placeholder="222-222-2222"  ng-minlength="12" ng-maxlength="12"  required>
+                                                                                         <p ng-show="requestform.phone.$error.minlength">Phone is too short.</p>
+                                                                                          <p ng-show="requestform.phone.$error.maxlength">Phone is too long.</p>
+                                                                                           <p ng-show="requestform.phone.$invalid && !requestform.phone.$pristine" class="help-block">Your Phone # is required.</p>
+                                                                                    </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                    <label for="address" class="col-sm-2 control-label">Address</label>
+                                                                                    <div class="col-sm-10">
+                                                                                        <input type="address"  class="form-control" name="address" ng-model="request.address" placeholder="123 wrappedup drive, Robertsdate, AL" ng-minlength="5" ng-maxlength="200" required>
+                                                                                         <p ng-show="requestform.address.$error.minlength">Address is too short.</p>
+                                                                                          <p ng-show="requestform.address.$error.maxlength">Address is too long.</p>
+                                                                                           <p ng-show="requestform.address.$invalid && !requestform.address.$pristine" class="help-block">Your Address is required.</p>                                        
+                                                                                    </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                    <label for="email" class="col-sm-2 control-label">Email</label>
+                                                                                    <div class="col-sm-10">
+                                                                                        <input type="email" class="form-control" name="email" ng-model="request.email" placeholder="sara@help.org" ng-minlength="5" ng-maxlength="150">
+                                                                                         <span class="error" ng-show="requestform.email.$error.email"> Not valid email!</span>
+                                                                                    </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                    <div class="col-sm-12">
+                                                                                        <br>
+                                                                                        <textarea  rows="5" class="form-control" name="details" ng-model="request.details" placeholder="I need for you to be here around 4:00pm." ng-minlength="5" ng-maxlength="300" required></textarea>
+                                                                                           <p ng-show="requestform.details.$error.minlength">Details is too short.</p>
+                                                                                          <p ng-show="requestform.details.$error.maxlength">Details is too long.</p>
+                                                                                           <p ng-show="requestform.details.$invalid && !requestform.details.$pristine" class="help-block">Your Details is required.</p>
+                                                                                    </div>
+                                                                            </div>
+                                                                            
+                                                                  
+                                                                    </div>
+                                        </div><!-- /input-group -->
+
+                                        <div class="modal-footer">
 
 
-                          <button type="submit" class="btn btn-warning btn-lg btn-block" ng-click="clear()">Clear</button>
-                          <button type="submit" class="btn btn-warning btn-lg btn-block" ng-click="cancel()">Cancel</button>
+                                            <button type="submit" class="btn btn-primary btn-lg btn-block" ng-disabled="!requestform.$valid" ng-click="yesrequest=1">Schedule</button>
 
-                      </div>
-                  </script>
-
-              </div>
-
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-                <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
-                <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.2.js"></script>
-
-                <script src="dist/wrappedup.lib.min.js"></script>
-                <script src="dist/wrappedup.app.min.js"></script>
-
-                 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55c052322fb932cf" async="async"></script>
-            </body>
-        </html>
+                                            <div class="well well-lg" ng-if="yesrequest">
+                                            <br>
+                                            <ul class="list-group textalignleft">
+                                                <li class="list-group-item" ng-repeat="(key, value) in request">{{key}} : {{value}}</li>
+                                            </ul>
+                                         
+                                            <br>
+                                            <button type="submit" class="btn btn-info btn-block animated requestnow shake" ng-click="send()">Request Now</button>
+                                            <br>
+                                            </div>
+                                            <button type="submit" class="btn btn-warning btn-lg btn-block" ng-click="clear()">Clear</button>
+                                            <button type="submit" class="btn btn-danger btn-lg btn-block" ng-click="cancel()">Cancel</button>
+                                        </div>
+                                              </form>
+                                        </script>
+                                    </div>
+                                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                                    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+                                    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.2.js"></script>
+                                    <script src="dist/wrappedup.lib.min.js"></script>
+                                    <script src="dist/wrappedup.app.min.js"></script>
+                                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55c052322fb932cf" async="async"></script>
+                                </body>
+                            </html>

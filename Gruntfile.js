@@ -49,7 +49,8 @@ module.exports = function(grunt) {
 				dest: './web/dist/wrappedup.lib.min.js'
 			},
 			app: {
-				src: ['./web/js/app/feature/app.js', './web/js/app/feature/calendar/calendar.js',  './web/js/app/feature/dialog.js'],
+				src: ['./web/js/app/feature/app.js', './web/js/app/feature/calendar/calendar.js',  
+								'./web/js/app/feature/dialog.js','./web/js/app/feature/servicerequest/services/request.js'],
 				dest: './web/dist/wrappedup.app.min.js'
 			},
 			css: {
