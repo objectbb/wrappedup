@@ -7,6 +7,7 @@
                 $modalInstance.close($scope.selected.item);
             };
             $scope.cancel = function() {
+                $scope.request = null;
                 $modalInstance.dismiss('cancel');
             };
             $scope.clear = function() {

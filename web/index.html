@@ -214,7 +214,7 @@
                                         <div class="modal-footer">
 
 
-                                            <button type="submit" class="btn btn-primary btn-lg btn-block" ng-disabled="!requestform.$valid" ng-click="yesrequest=1">Schedule</button>
+                                            <button type="submit" class="btn btn-default btn-lg btn-block" ng-disabled="!requestform.$valid" ng-click="yesrequest=1">Schedule Service</button>
 
                                             <div class="well well-lg" ng-if="yesrequest">
                                             <br>
@@ -224,13 +224,13 @@
                                             </ul>
                                          
                                             <br>
-                                            <button type="submit" class="btn btn-info btn-block animated requestnow shake" ng-click="send()">Request Now</button>
+                                            <button type="submit" class="btn btn-success btn-block animated requestnow shake" ng-click="send()">Request Now</button>
                                              <alert type="success" class="textalignleft" ng-show="issent == 1">Sent! expect response in less than 24 hours</alert>
                                              <alert type="error" ng-show="issent == 0">Error! request was not sent</alert>
                                             <br>
                                             </div>
                                             <button type="submit" class="btn btn-warning btn-lg btn-block" ng-click="clear()">Clear</button>
-                                            <button type="submit" class="btn btn-danger btn-lg btn-block" ng-click="cancel()">Cancel</button>
+                                            <button type="submit" class="btn btn-danger btn-lg btn-block" ng-click="cancel()">Close</button>
                                         </div>
                                               </form>
                                         </script>
