@@ -200,14 +200,15 @@
                                                                             <div class="form-group">
                                                                                     <label for="email" class="col-sm-2 control-label">Email</label>
                                                                                     <div class="col-sm-10">
-                                                                                        <input type="email" class="form-control" name="email" ng-model="info.email" placeholder="sara@help.org" ng-minlength="5" ng-maxlength="150">
+                                                                                        <input type="email" class="form-control" name="email" ng-model="info.email" placeholder="sara@gmail.org" ng-minlength="5" ng-maxlength="150">
                                                                                          <span class="error" ng-show="requestform.email.$error.email"> Not valid email!</span>
                                                                                     </div>
                                                                             </div>
                                                                             <div>
                                                                                     <div class="col-sm-12">
                                                                                         <br>
-                                                                                        <textarea  rows="5" class="form-control" name="details" ng-model="info.details" placeholder="I need for you to be here around 4:00pm." ng-minlength="5" ng-maxlength="300" required></textarea>
+                                                                                        <strong>Please provid detailed instructions and time you will like the service...Thank you!</strong>
+                                                                                        <textarea  rows="5" class="form-control" name="details" ng-model="info.details" placeholder="I need your help in moving a couch around 4:00pm." ng-minlength="5" ng-maxlength="300" required></textarea>
                                                                                            <p ng-show="requestform.details.$error.minlength">Details is too short.</p>
                                                                                           <p ng-show="requestform.details.$error.maxlength">Details is too long.</p>
                                                                                            <p ng-show="requestform.details.$invalid && !requestform.details.$pristine" class="help-block">Your Details is required.</p>
@@ -220,7 +221,7 @@
 
                                         <div class="modal-footer">
 
-                                            <button type="submit" class="btn btn-default btn-lg btn-block" ng-disabled="!requestform.$valid || !request" ng-click="yesrequest=1">Schedule Service</button>
+                                            <button type="submit" class="btn btn-default btn-lg btn-block" ng-disabled="!requestform.$valid || !request" ng-click="yesrequest=1" ng-class="{'animated requestnow shake': requestform.$valid && request}">Schedule Service</button>
 
                                             <div class="well well-lg" ng-if="yesrequest">
                                             <br>
