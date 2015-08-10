@@ -1,6 +1,7 @@
 <!doctype html>
 <html ng-app="wrappedup.app">
     <head>
+
        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="dist/main.min.css">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
@@ -75,13 +76,10 @@
 
                   <div class="col-xs-6 col-sm-3 sidebar-offcanvas background_turner_red spacinggeneral opacitystandard" id="sidebar">
                       
-                     <p>
-                      <img src="./images/facebook-big-icon.png" />
-                       <img src="./images/twitter-big-icon.png" />
-                      </p>
-                        
+                <div class="addthis_sharing_toolbox"></div>
+
                        <p class="spacingsidebar">
-                      <button type="button" class="btn btn-primary btn-lg btn-block">Donate</button>
+                      <button type="button" class="btn btn-primary btn-lg btn-block">Donate<span class="icondollarbg statsicon"></span></button>
                       </p>
                       
                          <p class="spacingsidebar">
@@ -120,42 +118,45 @@
                  
                             <div class=" col-sm-12 col-md-12 col-lg-12">
   
+                            <form name="requestform" >
+
                               <div class="btn-group"> 
 
                                   <span class="fontstrong input-group-addon">
-                                    <input type="checkbox" name="services" value="meal" aria-label="Meal"> Meal
+                                    <input type="checkbox" ng-model="request.meal" aria-label="Meal"> Meal
                                   </span>  
 
                                  <span class="fontstrong input-group-addon">
-                                    <input type="checkbox" name="services" value="housework" aria-label="Housework"> Housework
+                                    <input type="checkbox" ng-model="request.housework" aria-label="Housework"> Housework
                                   </span>
 
                                 <span class="fontstrong input-group-addon">
-                                    <input type="checkbox" name="services" value="childcare" aria-label="Childcare"> Child care
+                                    <input type="checkbox" ng-model="request.childcare" aria-label="Childcare"> Child care
                                   </span>
                                 </div>
   
                                 <div class="btn-group"> 
                                 <span class="fontstrong input-group-addon">
-                                  <input type="checkbox" name="services" value="pet" aria-label="Pet care"> Pet care
+                                  <input type="checkbox" ng-model="request.pet" aria-label="Pet care"> Pet care
                                 </span>  
 
                                 <span class="fontstrong input-group-addon">
-                                  <input type="checkbox" name="services" value="lawn" aria-label="Lawn care"> Lawn care
+                                  <input type="checkbox" ng-model="request.lawn" aria-label="Lawn care"> Lawn care
                                 </span>
 
 
                                 <span class="fontstrong input-group-addon">
-                                  <input type="checkbox" name="services" value="visitors" aria-label="Visitors"> Visitors
+                                  <input type="checkbox" ng-model="request.visitors" aria-label="Visitors"> Visitors
                                 </span>
                                 </div>
   
 
                                 <div class="btn-group"> 
                                 <span class="fontstrong input-group-addon">
-                                  <input type="checkbox" name="services" value="transportation" aria-label="Transportation"> Transportation
+                                  <input type="checkbox" ng-model="request.transportation" aria-label="Transportation"> Transportation
                                 </span> 
                                 </div>
+
 
                              </div>
                              </div>
@@ -164,29 +165,34 @@
                  
                             <div class="col-sm-12 col-md-12 col-lg-12">
      
-
-                            <form class="form-horizontal">
+                              <div class="form-group">
+                                <label for="phone" class="col-sm-2 control-label">Full Name</label>
+                                <div class="col-sm-10">
+                                  <input type="string" class="form-control" ng-model="request.fullname" placeholder="Sally Mae"  ng-minlength="5" ng-maxlength="75"  ng-required>
+                                </div>
+                              </div>
                               <div class="form-group">
                                 <label for="phone" class="col-sm-2 control-label">Phone</label>
                                 <div class="col-sm-10">
-                                  <input type="phone" class="form-control" id="phone" placeholder="222-222-2222">
+                                  <input type="phone" class="form-control" ng-model="request.phone" placeholder="222-222-2222"  ng-minlength="12" ng-maxlength="12"  ng-required>
                                 </div>
                               </div>
                                <div class="form-group">
                                 <label for="address" class="col-sm-2 control-label">Address</label>
                                 <div class="col-sm-10">
-                                  <input type="address" class="form-control" id="phone" placeholder="123 wrappedup drive, Robertsdate, AL">
+                                  <input type="address"  class="form-control" ng-model="request.address" placeholder="123 wrappedup drive, Robertsdate, AL" ng-minlength="5" ng-maxlength="200" ng-required>
                                 </div>
                               </div>
                               <div class="form-group">
                                 <label for="email" class="col-sm-2 control-label">Email</label>
                                 <div class="col-sm-10">
-                                  <input type="email" class="form-control" id="email" placeholder="sara@help.org">
+                                  <input type="email" class="form-control" ng-model="request.email" placeholder="sara@help.org" ng-minlength="5" ng-maxlength="150">
                                 </div>
                               </div>
-                              <div class="form-group">
+                              <div>
                                 <div class="col-sm-12">
-                                  <textarea  type="email" class="form-control" id="details" placeholder="Allergic to peanuts.  Need dishes washed and trash taken out."></textarea>
+                                  <br>
+                                  <textarea  rows="5" class="form-control" ng-model="request.details" placeholder="Allergic to peanuts.  Need dishes washed and trash taken out." ng-minlength="5" ng-maxlength="300" ng-required></textarea>
                                 </div>
                               </div>
                               
@@ -197,11 +203,25 @@
 
                       
                       <div class="modal-footer">
-                          <button type="submit" class="btn btn-primary btn-lg btn-block">Schedule</button>
+
+                            
+                          <button type="submit" class="btn btn-primary btn-lg btn-block" ng-disabled="! requestform.$valid" ng-click="yesrequest=1">Schedule</button>
+
+                          <p class="bg-info" ng-if="yesrequest">
+                              <br>
+                                {{request | json}}
+                                <br>
+                               <button type="submit" class="btn btn-info btn-block" ng-click="send()">Request Now</button>
+                               <br>
+                          </p>
+
+
+                          <button type="submit" class="btn btn-warning btn-lg btn-block" ng-click="clear()">Clear</button>
                           <button type="submit" class="btn btn-warning btn-lg btn-block" ng-click="cancel()">Cancel</button>
 
                       </div>
                   </script>
+
               </div>
 
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -210,5 +230,7 @@
 
                 <script src="dist/wrappedup.lib.min.js"></script>
                 <script src="dist/wrappedup.app.min.js"></script>
+
+                 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55c052322fb932cf" async="async"></script>
             </body>
         </html>

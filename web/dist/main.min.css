@@ -7478,3 +7478,16 @@ button.close {
      padding: 1px;
      border: 1px solid black;  
 }
+
+.icondollarbg:before {
+  font-family: "Glyphicons Halflings";
+  content: "\e148"; }
+
+  .statsicon {
+  position: absolute;
+  margin-top: -15px;
+  font-weight: bold;
+  font-color: white;
+  font-size: 40px;
+  opacity: .45;
+ }
