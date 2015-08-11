@@ -1,5 +1,5 @@
 (function() {
-    angular.module('wrappedup.app').controller('DatepickerDemoCtrl', function($scope, $modal, $log) {
+    angular.module('wrappedup.app').controller('DatepickerCtrl', function($scope, $modal, $log) {
         $scope.dt = new Date();
         $scope.minDate = new Date();
         $scope.open = function() {
