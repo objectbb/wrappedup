@@ -50,6 +50,7 @@ module.exports = function(grunt) {
 			},
 			app: {
 				src: ['./web/js/app/feature/app.js', './web/js/app/feature/calendar/calendar.js',  
+								'./web/js/app/feature/carousel/carousel.js',
 								'./web/js/app/feature/dialog.js','./web/js/app/feature/servicerequest/services/request.js'],
 				dest: './web/dist/wrappedup.app.min.js'
 			},
