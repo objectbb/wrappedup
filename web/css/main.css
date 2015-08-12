@@ -46,7 +46,7 @@
  }
  
  .background_turner_red {
-     background: linear-gradient( rgba(255, 0, 0, 0.7), rgba(255, 0, 0, 0.9)), url(../images/turner.jpg);
+     background: linear-gradient( rgba(255, 0, 0, 0.7), rgba(255, 0, 0, 0.95)), url(../images/turner.jpg);
  }
  
  .fulltilebg {
@@ -77,7 +77,7 @@
 
 .mapimageborder{
      padding: 1px;
-     border: 1px solid black;  
+     border: 1px solid black !important;  
 }
 
 .textalignleft{
@@ -108,12 +108,12 @@
 }
 
 .background_turnerwithotherppl_clear {
-     background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)), url(../images/turnerwithotherppl.jpg);
+     background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.95)), url(../images/turnerwithotherppl.jpg);
  }
 
 
 .background_car1_clear {
-     background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9)), url(../images/car1.jpg);
+     background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.95)), url(../images/car1.jpg);
  }
 
 .imagewidth{
